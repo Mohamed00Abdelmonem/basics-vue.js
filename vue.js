@@ -3,7 +3,8 @@ const app = Vue.createApp({
         return{ 
         name:"Mohamed Abdelmonme",
         length: null,
-        counter: 0,
+        counter_Asc: 0,
+        counter_Desc: 0,
         };
     },
     methods: {
@@ -12,9 +13,13 @@ const app = Vue.createApp({
             return this.length
         },
 
-        counter1(){
+        goBackToAsc(){
             ;
-            return this.counter+=1
+            return this.counter_Asc+=1
+        },
+        goBackToDesc(){
+            ;
+            return this.counter_Asc-=1
         },
 
     },

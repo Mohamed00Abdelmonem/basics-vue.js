@@ -3,23 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>basics vue</title>
+    <title>Vue.js with Bootstrap</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>welcome</h1>
-    <div id="app">
-        <h2>hi {{name}}</h2>
-        <h2>length = {{length}}</h2>
-        <button @click="myfunction">length</button>
-        <hr>
-        <h2>length = {{counter}}</h2>
-        <button @click="counter1">counter</button>
-        
+    <div id="app" class="container mt-5">
+        <div class="row">
+            <!-- First Column -->
+            <div class="col-md-6">
+                <h2 class="display-4">Hi {{name}}</h2>
+                <hr class="my-4">
+            </div>
+
+            <!-- Second Column -->
+            <div class="col-md-6">
+                <h2 class="display-4">Length = {{length}}</h2>
+                <button @click="myfunction" class="btn btn-primary">Get Length</button>
+                <hr class="my-4">
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Third Column -->
+            <div class="col-md-6">
+                <h2 class="display-4">Counter = {{counter_Asc}}</h2>
+                <button @click="goBackToAsc" class="btn btn-success ms-4">Go Back To Asc</button>
+                <button @click="goBackToDesc" class="btn btn-danger ms-4">Go Back To Desc</button>
+            </div>
+        </div>
     </div>
 
 
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+    <!-- Vue.js -->
     <script src="https://unpkg.com/vue@3"></script>
+
+    <!-- Your Vue.js app script -->
     <script src="vue.js"></script>
 </body>
 </html>
